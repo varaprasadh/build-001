@@ -6,6 +6,13 @@ const app = express();
 app.get('/', (req, res) => {
     return res.sendFile(__dirname + '/index.html');
 });
+
+app.get('/key', (req, res) => {
+    return res.json({
+        key: process.env.API_KEY
+    });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);

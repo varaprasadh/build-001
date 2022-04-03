@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/varaprasadh/build-001#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3"
   }
 }
