@@ -4,4 +4,11 @@ steps:
   - name: gcr.io/cloud-builders/docker
     args: ['push', 'gcr.io/$PROJECT_ID/build-001-cb:$SHORT_SHA']
   - name: gcr.io/cloud-builders/gcloud
-    args: ['run', 'deploy','build-001-cloud-build', '--project', '$PROJECT_ID', '--image', 'gcr.io/$PROJECT_ID/build-001-cb:$SHORT_SHA', '--allow-unauthenticated']
+    args: 
+      - run
+      - deploy
+      - build-001-cloud-build
+      - --project '$PROJECT_ID
+      - --image gcr.io/$PROJECT_ID/build-001-cb:$SHORT_SHA
+      - region us-central1
+      - --allow-unauthenticated
