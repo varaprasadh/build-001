@@ -8,7 +8,7 @@ steps:
       - run
       - deploy
       - build-001-cloud-build
-      - --project '$PROJECT_ID
+      - --project $PROJECT_ID
       - --image gcr.io/$PROJECT_ID/build-001-cb:$SHORT_SHA
       - region us-central1
       - --allow-unauthenticated
